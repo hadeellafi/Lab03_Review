@@ -9,14 +9,14 @@ namespace Lab03
         static void Main(string[] args)
         {
             ////Challenge 1
-          /*  Console.Write("Please enter 3 numbers:");
+            Console.Write("Challenge 1\nPlease enter 3 numbers:");
             string inputNumbers = Console.ReadLine();
             int product = Multiple3Numbers(inputNumbers);
-            Console.WriteLine($"The product of these 3 numbers is: {product}");*/
+            Console.WriteLine($"The product of these 3 numbers is: {product}");
 
             ////Challenge 2
-            /*
-            Console.Write("Please enter a number between 2-10: ");
+            
+            Console.Write("\nChallenge 2\nPlease enter a number between 2-10: ");
             int render;
             while (true)
             {
@@ -29,29 +29,35 @@ namespace Lab03
             int[] numbers = SetInputs(render);
             float average = CalculateAvg(numbers);
             Console.WriteLine($"The average of these {render} numbers is: {average}");
-            */
+            
             ////////Challenge 3
+            Console.WriteLine("\nChallenge 3");
             StarDraw();
 
             //////Challenge 4
             int[] arr = { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
             int maxFrq = FindMaxFeq(arr);
-            Console.WriteLine("Challenge 4\nExample: Input: [" + string.Join(",", arr) + "]");
+            Console.WriteLine("\nChallenge 4\nExample: Input: [" + string.Join(",", arr) + "]");
             Console.WriteLine("the number that appears the most times " + maxFrq);
+
             /////Challenge 5
             int[] arr2 = { -6, 7, 8, 2, 1, 1 };
             int max = Max(arr);
-            Console.WriteLine("Challenge 5\nExample: Input: [" + string.Join(",", arr2) + "]");
+            Console.WriteLine("\nChallenge 5\nExample: Input: [" + string.Join(",", arr2) + "]");
             Console.WriteLine("the maximum number is " + max);
+
             //////Challenge 6
             string path = "../../../words.txt";
             AddToWords(path);
+
             //////// Challenge 7
             ReadWords(path);
+
             /////// Challenge 8
             RemoveAddWord(path);
+
             ////// Challenge 9
-            Console.WriteLine("Challenge 9\nEnter a sentence:");
+            Console.WriteLine("\nChallenge 9\nEnter a sentence:");
             string sentence = Console.ReadLine();
 
             string[] wordAndLength = GetWordAndLength(sentence);
@@ -172,18 +178,19 @@ namespace Lab03
             return max;
         }
         public static void AddToWords(string path) {
-            Console.WriteLine("Challenge 6\n write a word to add it in words.txt file");
+            Console.WriteLine("\nChallenge 6\n write a word to add it in words.txt file");
             string word = Console.ReadLine();
             File.AppendAllText(path, word+" ");
         }
         public static void ReadWords(string path)
         {
-            Console.WriteLine("Challenge 7\n the words from words.txt file:");
+            Console.WriteLine("\nChallenge 7\n the words from words.txt file:");
             Console.WriteLine(File.ReadAllText(path));
         }
         public static void RemoveAddWord(string path)
         {
             string[] words = File.ReadAllText(path).Split(' ');
+            Console.WriteLine("\nChallenge 8\n");
             Console.WriteLine("Write the word that you want to remove");
             string wordToRemove = Console.ReadLine();
             Console.WriteLine("Write the word that you want to add");
